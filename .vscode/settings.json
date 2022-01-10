@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "blockmeshdict": "cpp",
+        "transportproperties": "cpp",
+        "toposetdict": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
+}

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+rm log
+
+rm -rf constant/polyMesh
+
+for i in {0..11}
+do
+   rm -rf processor$i
+done
+
+rm -rf 0

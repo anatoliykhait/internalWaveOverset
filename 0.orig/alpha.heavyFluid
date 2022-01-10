@@ -20,6 +20,11 @@ internalField   uniform 0;
 
 boundaryField
 {
+    oversetBoundary
+    {
+        type            overset;
+    }
+
     "(walls|cylinder)"
     {
         type            zeroGradient;
@@ -28,11 +33,6 @@ boundaryField
     "(frontAndBack|frontAndBack1)"
     {
         type            empty;
-    }
-
-    oversetBoundary
-    {
-        type            overset;
     }
 }
 

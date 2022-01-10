@@ -3,7 +3,8 @@
         "blockmeshdict": "cpp",
         "transportproperties": "cpp",
         "toposetdict": "cpp",
-        "dynamicmeshdict": "cpp"
+        "dynamicmeshdict": "cpp",
+        "u": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

@@ -20,14 +20,14 @@ internalField   uniform 0;
 
 boundaryField
 {
-    ".*"
-    {
-        type            zeroGradient;
-    }
-
     oversetBoundary
     {
         type            overset;
+    }
+
+    ".*"
+    {
+        type            zeroGradient;
     }
 }
 

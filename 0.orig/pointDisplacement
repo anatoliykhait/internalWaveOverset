@@ -20,15 +20,10 @@ internalField   uniform (0 0 0);
 
 boundaryField
 {
-    ".*"
+    oversetBoundary
     {
-        type            uniformFixedValue;
-        uniformValue    (0 0 0);
-    }
-
-    "(frontAndBack|frontAndBack1)"
-    {
-        type            empty;
+        patchType       overset;
+        type            zeroGradient;
     }
 
     cylinder
@@ -36,10 +31,15 @@ boundaryField
         type            zeroGradient;
     }
 
-    oversetBoundary
+    "(frontAndBack|frontAndBack1)"
     {
-        patchType       overset;
-        type            zeroGradient;
+        type            empty;
+    }
+
+    ".*"
+    {
+        type            uniformFixedValue;
+        uniformValue    (0 0 0);
     }
 }
 

@@ -26,7 +26,7 @@ solvers
         maxIter         100;
     }
 
-    "alpha.water.*"
+    "alpha.heavyFluid.*"
     {
         nAlphaCorr      3;
         nAlphaSubCycles 2;

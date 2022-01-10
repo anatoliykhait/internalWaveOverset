@@ -115,7 +115,7 @@ boundary
             ( 9  21 22 10 )
         );
     }
-    overset
+    oversetBoundary
     {
         type overset;
         faces

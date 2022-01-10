@@ -30,7 +30,7 @@ boundaryField
         type            empty;
     }
 
-    overset
+    oversetBoundary
     {
         type            overset;
     }

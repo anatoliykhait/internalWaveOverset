@@ -2,7 +2,8 @@
     "files.associations": {
         "blockmeshdict": "cpp",
         "transportproperties": "cpp",
-        "toposetdict": "cpp"
+        "toposetdict": "cpp",
+        "dynamicmeshdict": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

@@ -20,14 +20,17 @@ internalField   uniform 0;
 
 boundaryField
 {
-    #includeEtc "caseDicts/setConstraintTypes"
-
-    "(walls|walls1|hole|inlet|outlet)"
+    "(walls|cylinder)"
     {
         type            zeroGradient;
     }
 
-    overset1
+    "(frontAndBack|frontAndBack1)"
+    {
+        type            empty;
+    }
+
+    overset
     {
         type            overset;
     }

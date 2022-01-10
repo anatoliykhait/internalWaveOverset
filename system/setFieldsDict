@@ -24,7 +24,7 @@ regions
 (
     cellToCell
     {
-        set c0;
+        set staticCells;
 
         fieldValues
         (
@@ -34,7 +34,7 @@ regions
 
     cellToCell
     {
-        set c1;
+        set dynamicCells;
 
         fieldValues
         (

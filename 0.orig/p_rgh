@@ -20,16 +20,21 @@ internalField   uniform 0;
 
 boundaryField
 {
-    #includeEtc "caseDicts/setConstraintTypes"
-
-    overset1
-    {
-        type            overset;
-    }
-
-    "(walls|walls1|hole|outlet|inlet)"
+    "(walls|cylinder)"
     {
         type            fixedFluxPressure;
+        gradient        uniform 0;
+        value           uniform 0;
+    }
+
+    "(frontAndBack|frontAndBack1)"
+    {
+        type            empty;
+    }
+
+    overset
+    {
+        type            overset;
     }
 }
 

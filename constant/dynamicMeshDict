@@ -21,7 +21,7 @@ dynamicOversetFvMeshCoeffs
 //    layerRelax 0.3;
 }
 
-solver          multiSolidBodyMotionSolver;
+solver              multiSolidBodyMotionSolver;
 
 multiSolidBodyMotionSolverCoeffs
 {

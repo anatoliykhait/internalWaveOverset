@@ -16,9 +16,6 @@ FoamFile
 
 #include   "geometry"
 
-tankTop       1.0;
-tankRight     1.0;
-
 actions
 (
     {
@@ -30,15 +27,15 @@ actions
     }
 
     {
-        name    c1;
+        name    dynamicCells;
         type    cellSet;
         action  new;
         source  cellToCell;
-        set     c0;
+        set     staticCells;
     }
 
     {
-        name    c1;
+        name    dynamicCells;
         type    cellSet;
         action  invert;
     }

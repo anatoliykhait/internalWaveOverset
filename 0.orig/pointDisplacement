@@ -26,12 +26,17 @@ boundaryField
         uniformValue    (0 0 0);
     }
 
-    hole
+    "(frontAndBack|frontAndBack1)"
+    {
+        type            empty;
+    }
+
+    cylinder
     {
         type            zeroGradient;
     }
 
-    overset1
+    overset
     {
         patchType       overset;
         type            zeroGradient;

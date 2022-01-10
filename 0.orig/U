@@ -20,39 +20,24 @@ internalField   uniform (0 0 0);
 
 boundaryField
 {
-    #includeEtc "caseDicts/setConstraintTypes"
-
     walls
     {
         type            uniformFixedValue;
         uniformValue    (0 0 0);
     }
 
-    walls1
-    {
-        type            uniformFixedValue;
-        uniformValue    (0 0 0);
-    }
-
-    hole
+    cylinder
     {
         type            movingWallVelocity;
         value           uniform (0 0 0);
     }
 
-    outlet
+    "(frontAndBack|frontAndBack1)"
     {
-        type            uniformFixedValue;
-        uniformValue    (0 0 0);
+        type            empty;
     }
 
-    inlet
-    {
-        type            uniformFixedValue;
-        uniformValue     (0 0 0);
-    }
-
-    overset1
+    overset
     {
         type            overset;
     }

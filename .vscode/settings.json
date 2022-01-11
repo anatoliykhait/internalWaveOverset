@@ -4,7 +4,8 @@
         "transportproperties": "cpp",
         "toposetdict": "cpp",
         "dynamicmeshdict": "cpp",
-        "u": "cpp"
+        "u": "cpp",
+        "p_rgh": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

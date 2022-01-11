@@ -1,38 +1,39 @@
 /*--------------------------------*- C++ -*----------------------------------*\
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  v1812                                 |
-|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
 FoamFile
 {
     version     2.0;
     format      ascii;
-    class       dictionary;
-    object      dynamicMeshDict;
+    class       volScalarField;
+    object      p;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dynamicFvMesh       dynamicOversetFvMesh;
+dimensions      [0 2 -2 0 0 0 0];
 
-dynamicOversetFvMeshCoeffs
+internalField   uniform 0;
+
+boundaryField
 {
-//    layerRelax 0.3;
-}
-
-solver              multiSolidBodyMotionSolver;
-
-multiSolidBodyMotionSolverCoeffs
-{
-    movingZone1
+    oversetBoundary
     {
-        solidBodyMotionFunction oscillatingLinearMotion;
-        oscillatingLinearMotionCoeffs
-        {
-            amplitude       (0.0 0.0 0.01);
-            omega           5.0;
-        }
+        type            overset;
+    }
+
+    "(walls|cylinder)"
+    {
+        type            calculated;
+        value           $internalField;
+    }
+
+    "(frontAndBack|frontAndBack1)"
+    {
+        type            empty;
     }
 }
 

@@ -33,11 +33,11 @@ stopAt          endTime;
 
 endTime         1;
 
-deltaT          1e-7;
+deltaT          1e-4;
 
 writeControl    adjustable;
 
-writeInterval   1e-5;
+writeInterval   1e-2;
 
 purgeWrite      0;
 
@@ -62,6 +62,3 @@ maxAlphaCo      2.0;
 maxDeltaT       1;
 
 // ************************************************************************* //
-
-
-

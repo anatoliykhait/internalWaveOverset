@@ -6,7 +6,8 @@
         "dynamicmeshdict": "cpp",
         "u": "cpp",
         "p_rgh": "cpp",
-        "zoneid": "cpp"
+        "zoneid": "cpp",
+        "*.heavyfluid": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

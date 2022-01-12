@@ -31,15 +31,15 @@ boundaryField
         type            zeroGradient;
     }
 
-    // "(frontAndBack|frontAndBack1)"
-    // {
-    //     type            empty;
-    // }
-
-    ".*"
+    "(walls|top)"
     {
         type            fixedValue;
         value           uniform (0 0 0);
+    }
+
+    "(frontAndBack|frontAndBack1)"
+    {
+        type            empty;
     }
 }
 

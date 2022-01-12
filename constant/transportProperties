@@ -14,7 +14,7 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-phases ( heavyFluid lightFluid );
+phases (heavyFluid lightFluid);
 
 heavyFluid
 {

@@ -5,7 +5,8 @@
         "toposetdict": "cpp",
         "dynamicmeshdict": "cpp",
         "u": "cpp",
-        "p_rgh": "cpp"
+        "p_rgh": "cpp",
+        "zoneid": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

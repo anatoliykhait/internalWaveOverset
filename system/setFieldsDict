@@ -42,14 +42,14 @@ regions
         );
     }
 
-    boxToCell
-    {
-        box ( -100 -100 -100 ) ( 100 100 0.0 );
-        fieldValues
-        (
-            volScalarFieldValue alpha.heavyFluid 1
-        );
-    }
+    // boxToCell
+    // {
+    //     box ( -100 -100 -100 ) ( 100 100 0.0 );
+    //     fieldValues
+    //     (
+    //         volScalarFieldValue alpha.heavyFluid 1
+    //     );
+    // }
 );
 
 // ************************************************************************* //

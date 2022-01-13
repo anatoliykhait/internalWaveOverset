@@ -10,8 +10,8 @@
 
 domainWidth   0.01;
 
-tankBottom   -1.0;
-tankTop       1.0;
+tankBottom   -0.8;
+tankTop       1.2;
 tankLeft     -1.0;
 tankRight     1.0;
 

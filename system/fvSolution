@@ -54,7 +54,7 @@ solvers
     {
         solver                PBiCGStab;
         preconditioner        DILU;
-        tolerance             1e-9;
+        tolerance             1e-6; //1e-9;
         relTol                0.01;
         maxIter               500;
     }
@@ -106,7 +106,11 @@ solvers
 
 PIMPLE
 {
+    // Controls solving of the momentum predictor
+    // Typically set to off for some flows including multiphase
     momentumPredictor         no;
+    // Continuity due to cells deformation
+    correctPhi                no;
     // nOuterCorrections = 1 equals to PISO
     nOuterCorrectors          1;
     nCorrectors               2;

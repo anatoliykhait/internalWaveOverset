@@ -32,7 +32,7 @@ multiSolidBodyMotionSolverCoeffs
         oscillatingLinearMotionCoeffs
         {
             amplitude       (0.0 0.0 0.1);
-            omega           0.1;
+            omega           0.889;
         }
     }
 }

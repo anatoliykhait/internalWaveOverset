@@ -23,7 +23,7 @@ actions
         type    cellSet;
         action  new;
         source  regionsToCell;
-        insidePoints (( #calc"$tankTop*0.99" 0.0 #calc"$tankRight*0.99" ));
+        insidePoints (( #calc"$tankRight*0.99" 0.0 #calc"$tankTop*0.99" ));
     }
 
     {

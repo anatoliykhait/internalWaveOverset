@@ -9,7 +9,8 @@
         "zoneid": "cpp",
         "*.heavyfluid": "cpp",
         "controldict": "cpp",
-        "fvsolution": "cpp"
+        "fvsolution": "cpp",
+        "geometry": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

@@ -7,7 +7,8 @@
         "u": "cpp",
         "p_rgh": "cpp",
         "zoneid": "cpp",
-        "*.heavyfluid": "cpp"
+        "*.heavyfluid": "cpp",
+        "controldict": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

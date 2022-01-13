@@ -18,7 +18,8 @@ dynamicFvMesh       dynamicOversetFvMesh;
 
 dynamicOversetFvMeshCoeffs
 {
-//    layerRelax 0.3;
+    // Control the number of interpolated cells
+    // layerRelax 0.3;
 }
 
 solver              multiSolidBodyMotionSolver;

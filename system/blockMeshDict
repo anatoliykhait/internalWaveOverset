@@ -30,25 +30,25 @@ vertices
     ( $tankLeft           $domainWidth    $tankTop    ) // 7
 
     // movingZone
-    ( #calc"-$outerRad"   #calc"-$domainWidth"   0.0               ) // 8
-    ( #calc"-$cylRad"     #calc"-$domainWidth"   0.0               ) // 9
-    ( #calc"-$cylRad"            $domainWidth    0.0               ) // 10
-    ( #calc"-$outerRad"          $domainWidth    0.0               ) // 11
+    ( #calc"-$outerRad*cos(M_PI/4.0)"   #calc"-$domainWidth"   #calc"$outerRad*cos(M_PI/4.0)" ) // 8
+    ( #calc"-$cylRad*cos(M_PI/4.0)"     #calc"-$domainWidth"   #calc"$cylRad*cos(M_PI/4.0)"   ) // 9
+    ( #calc"-$cylRad*cos(M_PI/4.0)"            $domainWidth    #calc"$cylRad*cos(M_PI/4.0)"   ) // 10
+    ( #calc"-$outerRad*cos(M_PI/4.0)"          $domainWidth    #calc"$outerRad*cos(M_PI/4.0)" ) // 11
 
-    ( 0.0                 #calc"-$domainWidth"   $outerRad         ) // 12
-    ( 0.0                 #calc"-$domainWidth"   $cylRad           ) // 13
-    ( 0.0                        $domainWidth    $cylRad           ) // 14
-    ( 0.0                        $domainWidth    $outerRad         ) // 15
+    ( #calc"$outerRad*cos(M_PI/4.0)"   #calc"-$domainWidth"   #calc"$outerRad*cos(M_PI/4.0)" ) // 12
+    ( #calc"$cylRad*cos(M_PI/4.0)"     #calc"-$domainWidth"   #calc"$cylRad*cos(M_PI/4.0)"   ) // 13
+    ( #calc"$cylRad*cos(M_PI/4.0)"            $domainWidth    #calc"$cylRad*cos(M_PI/4.0)"   ) // 14
+    ( #calc"$outerRad*cos(M_PI/4.0)"          $domainWidth    #calc"$outerRad*cos(M_PI/4.0)" ) // 15
 
-    ( $outerRad           #calc"-$domainWidth"   0.0               ) // 16
-    ( $cylRad             #calc"-$domainWidth"   0.0               ) // 17
-    ( $cylRad                    $domainWidth    0.0               ) // 18
-    ( $outerRad                  $domainWidth    0.0               ) // 19
+    ( #calc"$outerRad*cos(M_PI/4.0)"   #calc"-$domainWidth"   #calc"-$outerRad*cos(M_PI/4.0)" ) // 16
+    ( #calc"$cylRad*cos(M_PI/4.0)"     #calc"-$domainWidth"   #calc"-$cylRad*cos(M_PI/4.0)"   ) // 17
+    ( #calc"$cylRad*cos(M_PI/4.0)"            $domainWidth    #calc"-$cylRad*cos(M_PI/4.0)"   ) // 18
+    ( #calc"$outerRad*cos(M_PI/4.0)"          $domainWidth    #calc"-$outerRad*cos(M_PI/4.0)" ) // 19
 
-    ( 0.0                 #calc"-$domainWidth"   #calc"-$outerRad" ) // 20
-    ( 0.0                 #calc"-$domainWidth"   #calc"-$cylRad"   ) // 21
-    ( 0.0                        $domainWidth    #calc"-$cylRad"   ) // 22
-    ( 0.0                        $domainWidth    #calc"-$outerRad" ) // 23
+    ( #calc"-$outerRad*cos(M_PI/4.0)"   #calc"-$domainWidth"   #calc"-$outerRad*cos(M_PI/4.0)" ) // 20
+    ( #calc"-$cylRad*cos(M_PI/4.0)"     #calc"-$domainWidth"   #calc"-$cylRad*cos(M_PI/4.0)"   ) // 21
+    ( #calc"-$cylRad*cos(M_PI/4.0)"            $domainWidth    #calc"-$cylRad*cos(M_PI/4.0)"   ) // 22
+    ( #calc"-$outerRad*cos(M_PI/4.0)"          $domainWidth    #calc"-$outerRad*cos(M_PI/4.0)" ) // 23
 );
 
 blocks
@@ -63,23 +63,14 @@ blocks
 
 edges
 (
-    arc  9   13 ( #calc"-$cylRad*cos(M_PI/4.0)"   #calc"-$domainWidth"   #calc"$cylRad*cos(M_PI/4.0)"  )
-    arc  10  14 ( #calc"-$cylRad*cos(M_PI/4.0)"          $domainWidth    #calc"$cylRad*cos(M_PI/4.0)"  )
-    arc  13  17 ( #calc" $cylRad*cos(M_PI/4.0)"   #calc"-$domainWidth"   #calc"$cylRad*cos(M_PI/4.0)"  )
-    arc  14  18 ( #calc" $cylRad*cos(M_PI/4.0)"          $domainWidth    #calc"$cylRad*cos(M_PI/4.0)"  )
-    arc  17  21 ( #calc" $cylRad*cos(M_PI/4.0)"   #calc"-$domainWidth"   #calc"-$cylRad*cos(M_PI/4.0)" )
-    arc  18  22 ( #calc" $cylRad*cos(M_PI/4.0)"          $domainWidth    #calc"-$cylRad*cos(M_PI/4.0)" )
-    arc  21  9  ( #calc"-$cylRad*cos(M_PI/4.0)"   #calc"-$domainWidth"   #calc"-$cylRad*cos(M_PI/4.0)" )
-    arc  22  10 ( #calc"-$cylRad*cos(M_PI/4.0)"          $domainWidth    #calc"-$cylRad*cos(M_PI/4.0)" )
-
-    arc  8   12 ( #calc"-$outerRad*cos(M_PI/4.0)"   #calc"-$domainWidth"   #calc"$outerRad*cos(M_PI/4.0)"  )
-    arc  11  15 ( #calc"-$outerRad*cos(M_PI/4.0)"          $domainWidth    #calc"$outerRad*cos(M_PI/4.0)"  )
-    arc  12  16 ( #calc" $outerRad*cos(M_PI/4.0)"   #calc"-$domainWidth"   #calc"$outerRad*cos(M_PI/4.0)"  )
-    arc  15  19 ( #calc" $outerRad*cos(M_PI/4.0)"          $domainWidth    #calc"$outerRad*cos(M_PI/4.0)"  )
-    arc  16  20 ( #calc" $outerRad*cos(M_PI/4.0)"   #calc"-$domainWidth"   #calc"-$outerRad*cos(M_PI/4.0)" )
-    arc  19  23 ( #calc" $outerRad*cos(M_PI/4.0)"          $domainWidth    #calc"-$outerRad*cos(M_PI/4.0)" )
-    arc  20  8  ( #calc"-$outerRad*cos(M_PI/4.0)"   #calc"-$domainWidth"   #calc"-$outerRad*cos(M_PI/4.0)" )
-    arc  23  11 ( #calc"-$outerRad*cos(M_PI/4.0)"          $domainWidth    #calc"-$outerRad*cos(M_PI/4.0)" )
+    arc  9   13 ( 0.0               #calc"-$domainWidth"   $cylRad         )
+    arc  10  14 ( 0.0                      $domainWidth    $cylRad         )
+    arc  13  17 ( $cylRad           #calc"-$domainWidth"   0.0             )
+    arc  14  18 ( $cylRad                  $domainWidth    0.0             )
+    arc  17  21 ( 0.0               #calc"-$domainWidth"   #calc"-$cylRad" )
+    arc  18  22 ( 0.0                      $domainWidth    #calc"-$cylRad" )
+    arc  21  9  ( #calc"-$cylRad"   #calc"-$domainWidth"   0.0             )
+    arc  22  10 ( #calc"-$cylRad"          $domainWidth    0.0             )
 );
 
 boundary

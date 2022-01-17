@@ -28,11 +28,21 @@ multiSolidBodyMotionSolverCoeffs
 {
     movingZone1
     {
-        solidBodyMotionFunction oscillatingLinearMotion;
-        oscillatingLinearMotionCoeffs
+        solidBodyMotionFunction internalWaveLinearMotion;
+        internalWaveLinearMotionCoeffs
         {
-            amplitude       (0.0 0.0 0.1);
-            omega           0.889;
+            amplitude       (
+                            (0.0 0.0 0.1)
+                            (0.0 0.0 0.1)
+                            );
+            omega           (
+                            0.889
+                            1.778
+                            );
+            phase           (
+                            #calc"-M_PI_2"
+                            #calc"-M_PI_2"
+                            );
         }
     }
 }

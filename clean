@@ -12,3 +12,4 @@ done
 rm -rf 0
 rm *.OpenFOAM
 rm -rf dynamicCode
+rm -rf textfields

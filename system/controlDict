@@ -61,4 +61,21 @@ maxAlphaCo          0.65;
 
 maxDeltaT           1;
 
+functions
+{
+    textFields
+    {
+        type            textFields;
+        libs            (libinternalWave);
+        enabled         true;
+        writeControl    adjustableRunTime;
+        writeInterval   10;
+        
+        folder          textfields;
+        
+        U               U;
+        alpha           alpha.heavyFluid;
+    }
+}
+
 // ************************************************************************* //
